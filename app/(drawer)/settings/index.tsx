@@ -1,13 +1,13 @@
 import { Text, View } from 'react-native';
 
-import EditScreenInfo from '../../../components/edit-screen-info';
+import EditScreenInfo from '~/components/edit-screen-info';
 
 const Page = () => {
     return (
         <View className={styles.container}>
-            <Text className={styles.title}>Home</Text>
+            <Text className={styles.title}>Settings</Text>
             <View className={styles.separator} />
-            <EditScreenInfo path="app/(tabs)/clockin/index.tsx" />
+            <EditScreenInfo path="app/(drawer)/(tabs)/settings/index.tsx" />
         </View>
     );
 };

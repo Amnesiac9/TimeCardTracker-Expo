@@ -6,22 +6,13 @@ import { Pressable, StyleSheet } from 'react-native';
 const DrawerLayout = () => (
     <Drawer>
         <Drawer.Screen
-            name="index"
-            options={{
-                headerTitle: 'Home',
-                drawerLabel: 'Home',
-                drawerIcon: ({ size, color }) => (
-                    <Ionicons name="home-outline" size={size} color={color} />
-                ),
-            }}
-        />
-        <Drawer.Screen
             name="(tabs)"
             options={{
-                headerTitle: 'Tabs',
-                drawerLabel: 'Tabs',
+                headerTitle: 'Timecard',
+                drawerLabel: 'Timecard',
                 drawerIcon: ({ size, color }) => (
-                    <MaterialIcons name="border-bottom" size={size} color={color} />
+                    // <MaterialIcons name="border-bottom" size={size} color={color} />
+                    <Ionicons name="time-outline" size={size} color={color} />
                 ),
                 headerRight: () => (
                     <Link href="/modal" asChild>
@@ -36,6 +27,16 @@ const DrawerLayout = () => (
                             )}
                         </Pressable>
                     </Link>
+                ),
+            }}
+        />
+        <Drawer.Screen
+            name="settings/index"
+            options={{
+                headerTitle: 'Settings',
+                drawerLabel: 'Settings',
+                drawerIcon: ({ size, color }) => (
+                    <Ionicons name="settings-outline" size={size} color={color} />
                 ),
             }}
         />
