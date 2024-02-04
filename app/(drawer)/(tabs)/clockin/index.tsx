@@ -1,12 +1,14 @@
 import { useColorScheme } from 'nativewind';
 import { View } from 'react-native';
-import { Button, Text } from 'react-native-paper';
+import { useTheme, Button, Text } from 'react-native-paper';
 
 import EditScreenInfo from '~/components/edit-screen-info';
 
 const Page = () => {
+    const theme = useTheme();
+
     return (
-        <View className={styles.container}>
+        <View className={styles.container} style={{ backgroundColor: theme.colors.background }}>
             <View className={styles.titleArea}>
                 <Text className={styles.title}>Clock In</Text>
                 <View className={styles.separator} />

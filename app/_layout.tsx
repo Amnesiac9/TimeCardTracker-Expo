@@ -14,6 +14,7 @@ const themeLight = {
     // Specify custom property
     myOwnProperty: true,
     // Specify custom property in nested object
+    dark: false,
     colors: {
         primary: 'rgb(0, 107, 94)',
         onPrimary: 'rgb(255, 255, 255)',
@@ -67,6 +68,7 @@ const themeDark = {
     // Specify custom property
     myOwnProperty: true,
     // Specify custom property in nested object
+    dark: true,
     colors: {
         primary: 'rgb(85, 219, 198)',
         onPrimary: 'rgb(0, 55, 48)',
@@ -84,7 +86,7 @@ const themeDark = {
         onError: 'rgb(105, 0, 5)',
         errorContainer: 'rgb(147, 0, 10)',
         onErrorContainer: 'rgb(255, 180, 171)',
-        background: 'rgb(25, 28, 27)',
+        background: 'rgb(0, 0, 0)',
         onBackground: 'rgb(224, 227, 225)',
         surface: 'rgb(25, 28, 27)',
         onSurface: 'rgb(224, 227, 225)',

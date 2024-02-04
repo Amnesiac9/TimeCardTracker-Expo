@@ -15,6 +15,7 @@ export default function TabLayout() {
             screenOptions={{
                 headerShown: false,
                 tabBarActiveTintColor: 'black',
+                tabBarInactiveBackgroundColor: 'black',
             }}>
             <Tabs.Screen
                 name="clockin/index"
