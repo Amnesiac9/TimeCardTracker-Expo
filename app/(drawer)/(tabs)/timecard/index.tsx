@@ -5,9 +5,10 @@ import EditScreenInfo from '~/components/edit-screen-info';
 const Page = () => {
     return (
         <View className={styles.container}>
-            <Text className={styles.title}>Home</Text>
+            <Text className={styles.title}>Timecard</Text>
             <View className={styles.separator} />
             <EditScreenInfo path="app/(tabs)/timecard/index.tsx" />
+            <Text>Buttons?</Text>
         </View>
     );
 };

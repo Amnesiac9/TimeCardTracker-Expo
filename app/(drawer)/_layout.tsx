@@ -8,8 +8,8 @@ const DrawerLayout = () => (
         <Drawer.Screen
             name="(tabs)"
             options={{
-                headerTitle: 'Timecard',
-                drawerLabel: 'Timecard',
+                headerTitle: 'Time Tracking',
+                drawerLabel: 'Time Tracking',
                 drawerIcon: ({ size, color }) => (
                     // <MaterialIcons name="border-bottom" size={size} color={color} />
                     <Ionicons name="time-outline" size={size} color={color} />
