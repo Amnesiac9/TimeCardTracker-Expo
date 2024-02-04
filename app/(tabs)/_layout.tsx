@@ -17,16 +17,16 @@ export default function TabLayout() {
                 tabBarActiveTintColor: 'black',
             }}>
             <Tabs.Screen
-                name="index"
+                name="clockin/index"
                 options={{
-                    title: 'Tab One',
+                    title: 'Clock In',
                     tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
                 }}
             />
             <Tabs.Screen
-                name="two"
+                name="timecard/index"
                 options={{
-                    title: 'Tab Two',
+                    title: 'Timecard',
                     tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
                 }}
             />

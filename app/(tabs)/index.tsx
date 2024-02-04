@@ -2,15 +2,17 @@ import { Text, View } from 'react-native';
 
 import EditScreenInfo from '../../components/edit-screen-info';
 
-export default function TabOneScreen() {
+const Page = () => {
     return (
         <View className={styles.container}>
-            <Text className={styles.title}>Tab One</Text>
+            <Text className={styles.title}>Home</Text>
             <View className={styles.separator} />
-            <EditScreenInfo path="app/(drawer)/(tabs)/index.tsx" />
+            <EditScreenInfo path="app/(tabs)/index.tsx" />
         </View>
     );
-}
+};
+
+export default Page;
 
 const styles = {
     container: `items-center flex-1 justify-center`,
