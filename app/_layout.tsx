@@ -2,15 +2,19 @@ import '../global.css';
 import { Stack } from 'expo-router';
 import { useColorScheme } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import { MD3LightTheme as DefaultTheme, PaperProvider } from 'react-native-paper';
+import {
+    MD3LightTheme as LightTheme,
+    MD3DarkTheme as DarkTheme,
+    PaperProvider,
+} from 'react-native-paper';
 
 export const unstable_settings = {
     // Ensure that reloading on `/modal` keeps a back button present.
     initialRouteName: '(drawer)',
 };
 
-const themeLight = {
-    ...DefaultTheme,
+const lightThemeCustom = {
+    ...LightTheme,
     // Specify custom property
     myOwnProperty: true,
     // Specify custom property in nested object
@@ -63,8 +67,8 @@ const themeLight = {
     },
 };
 
-const themeDark = {
-    ...DefaultTheme,
+const darkThemeCustom = {
+    ...DarkTheme,
     // Specify custom property
     myOwnProperty: true,
     // Specify custom property in nested object
@@ -117,13 +121,17 @@ const themeDark = {
     },
 };
 
+// export type AppTheme = typeof themeDark;
+
+// export const useAppTheme = () => useTheme<AppTheme>();
+
 export default function RootLayout() {
     const colorScheme = useColorScheme();
+    const theme = colorScheme === 'dark' ? DarkTheme : LightTheme;
 
     return (
         // eslint-disable-next-line prettier/prettier
-        <PaperProvider theme={colorScheme === 'dark' ? themeDark : themeLight}>
-            {/* This is the root provider for the app. */}
+        <PaperProvider theme={theme}>
             <GestureHandlerRootView style={{ flex: 1 }}>
                 <Stack>
                     <Stack.Screen name="(drawer)" options={{ headerShown: false }} />

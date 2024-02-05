@@ -1,14 +1,12 @@
-import { useColorScheme } from 'nativewind';
 import { View } from 'react-native';
-import { useTheme, Button, Text } from 'react-native-paper';
+import { useTheme, Button, Text, Divider, Checkbox } from 'react-native-paper';
 
 import EditScreenInfo from '~/components/edit-screen-info';
 
 const Page = () => {
-    const theme = useTheme();
-
+    const Theme = useTheme();
     return (
-        <View className={styles.container} style={{ backgroundColor: theme.colors.background }}>
+        <View className={styles.container} style={{ backgroundColor: Theme.colors.background }}>
             <View className={styles.titleArea}>
                 <Text className={styles.title}>Clock In</Text>
                 <View className={styles.separator} />
@@ -21,15 +19,16 @@ const Page = () => {
                 <Button mode="contained" onPress={() => {}}>
                     Clock In
                 </Button>
-                <View className={styles.separator} />
+                <Divider />
                 <Button mode="contained" onPress={() => {}}>
                     View Shifts
                 </Button>
-                <View className={styles.blankSeperator} />
+                <Divider theme={{ colors: { outlineVariant: 'green' } }} />
                 {/* <Text onPress={() => setColorScheme(colorScheme === 'light' ? 'dark' : 'light')}>
                     {`The color scheme is ${colorScheme}`}
                 </Text> */}
                 <EditScreenInfo path="app/(tabs)/clockin/index.tsx" />
+                <Checkbox status={'checked'} onPress={() => {}} />
             </View>
         </View>
     );
